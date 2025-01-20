@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/")
+@RequestMapping
 public class HomeController{
 
-    @GetMapping
+    @GetMapping(path = "/")
     public ResponseEntity<String> home(){
         return ResponseEntity.ok("Home Page is Running Successfully");
     }
